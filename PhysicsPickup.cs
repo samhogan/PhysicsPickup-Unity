@@ -18,10 +18,10 @@ public class PhysicsPickup : MonoBehaviour
     void Start ()
     {
        
-	}
+    }
 	
 	// Update is called once per frame
-	void Update ()
+    void Update ()
     {
         //on mouse click, either pickup or drop an item
         if(Input.GetMouseButtonDown(0))
@@ -35,19 +35,19 @@ public class PhysicsPickup : MonoBehaviour
                 DropItem();
             }
         }
-	}
+    }
 
     void FixedUpdate()
     {
         if(curObject != null)
         {
             //keep the object in front of the camera
-            reposObject();
+            ReposObject();
         }
     }
 
     //calculates the new rotation and position of the curObject
-    void reposObject()
+    void ReposObject()
     {
         //calculate the target position and rotation of the curbody
         Vector3 targetPos = transform.position + transform.forward * dist;
